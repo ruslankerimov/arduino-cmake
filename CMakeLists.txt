@@ -17,4 +17,8 @@ project(ArduinoExample C CXX)
 print_board_list()
 print_programmer_list()
 
-add_subdirectory(example)   #add the example directory into build
+set(ARDUINO_DEFAULT_BOARD uno) # Default Board ID, when not specified
+set(ARDUINO_DEFAULT_PORT /dev/ttyACM0) # Default Port, when not specified
+
+add_subdirectory(example)
+add_subdirectory(lamp)
